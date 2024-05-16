@@ -7,6 +7,8 @@ package oopjava;
 import java.awt.Component;
 import javax.swing.UnsupportedLookAndFeelException;
  import java.awt.TextField ; 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javaapplication1withant.SubClass_Child;
  import javax.swing.JTextField ;
 import javax.swing.UIManager ;  
@@ -37,7 +39,7 @@ public class oopjava extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea = new javax.swing.JTextArea();
+        jTextArearec = new javax.swing.JTextArea();
         jPanel9 = new javax.swing.JPanel();
         jtextSubtotal = new javax.swing.JTextField();
         jTotal = new javax.swing.JTextField();
@@ -46,11 +48,11 @@ public class oopjava extends javax.swing.JFrame {
         jLsubtax = new javax.swing.JLabel();
         jLTotal = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jTextField17 = new javax.swing.JTextField();
+        jtexttotalitems = new javax.swing.JTextField();
         jLTotal8 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
+        jtextdrink = new javax.swing.JTextField();
         jLsubtax4 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        jtxtmeal = new javax.swing.JTextField();
         jLTax6 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLTax1 = new javax.swing.JLabel();
@@ -69,18 +71,19 @@ public class oopjava extends javax.swing.JFrame {
         jLTax4 = new javax.swing.JLabel();
         jLsubtax3 = new javax.swing.JLabel();
         jLTotal5 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
+        jtextchocomilkShake = new javax.swing.JTextField();
+        jtextvanilliacone = new javax.swing.JTextField();
+        jtxtMilkShake = new javax.swing.JTextField();
         jLTax5 = new javax.swing.JLabel();
         jLTotal6 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        jtxtclassvan = new javax.swing.JTextField();
         jLTotal7 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        jtxtvanMilkShake = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jBtnReset = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 600));
@@ -108,9 +111,9 @@ public class oopjava extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 12));
 
-        jTextArea.setColumns(20);
-        jTextArea.setRows(5);
-        jScrollPane1.setViewportView(jTextArea);
+        jTextArearec.setColumns(20);
+        jTextArearec.setRows(5);
+        jScrollPane1.setViewportView(jTextArearec);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -118,7 +121,7 @@ public class oopjava extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -202,30 +205,30 @@ public class oopjava extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 12));
 
-        jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        jtexttotalitems.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtexttotalitems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                jtexttotalitemsActionPerformed(evt);
             }
         });
 
         jLTotal8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLTotal8.setText("Total Cost of Made ");
+        jLTotal8.setText("Total Cost of Items");
 
-        jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        jtextdrink.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtextdrink.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                jtextdrinkActionPerformed(evt);
             }
         });
 
         jLsubtax4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLsubtax4.setText("Cost of Drinks ");
 
-        jTextField19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        jtxtmeal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtmeal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                jtxtmealActionPerformed(evt);
             }
         });
 
@@ -244,9 +247,9 @@ public class oopjava extends javax.swing.JFrame {
                     .addComponent(jLTotal8, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtextdrink, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtmeal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtexttotalitems, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
         );
         jPanel5Layout.setVerticalGroup(
@@ -254,15 +257,15 @@ public class oopjava extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtmeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTax6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtextdrink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLsubtax4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtexttotalitems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTotal8))
                 .addGap(18, 18, 18))
         );
@@ -401,24 +404,24 @@ public class oopjava extends javax.swing.JFrame {
         jLTotal5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLTotal5.setText("Classic vanilla");
 
-        jTextField12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        jtextchocomilkShake.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtextchocomilkShake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                jtextchocomilkShakeActionPerformed(evt);
             }
         });
 
-        jTextField13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        jtextvanilliacone.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtextvanilliacone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                jtextvanilliaconeActionPerformed(evt);
             }
         });
 
-        jTextField14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        jtxtMilkShake.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtMilkShake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                jtxtMilkShakeActionPerformed(evt);
             }
         });
 
@@ -428,20 +431,20 @@ public class oopjava extends javax.swing.JFrame {
         jLTotal6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLTotal6.setText("Vanilla Milk Shake");
 
-        jTextField15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        jtxtclassvan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtclassvan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                jtxtclassvanActionPerformed(evt);
             }
         });
 
         jLTotal7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLTotal7.setText("Chocolate Milk Shake");
 
-        jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        jtxtvanMilkShake.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtvanMilkShake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                jtxtvanMilkShakeActionPerformed(evt);
             }
         });
 
@@ -457,14 +460,14 @@ public class oopjava extends javax.swing.JFrame {
                     .addComponent(jLTotal5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTotal6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTotal7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(95, Short.MAX_VALUE))
+                    .addComponent(jtxtMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtextvanilliacone, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtclassvan, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtvanMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtextchocomilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLTax4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -477,24 +480,24 @@ public class oopjava extends javax.swing.JFrame {
                 .addComponent(jLTax4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLTax5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtextvanilliacone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLsubtax3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLTotal5)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtclassvan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLTotal6)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtvanMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLTotal7)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtextchocomilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -526,14 +529,26 @@ public class oopjava extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Receipt");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(264, 264, 264)
+                .addGap(140, 140, 140)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(43, 43, 43)
+                .addComponent(jButton4)
+                .addGap(46, 46, 46)
                 .addComponent(jBtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(67, 67, 67)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -546,7 +561,8 @@ public class oopjava extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnReset)
                     .addComponent(jButton3)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(jButton4))
                 .addContainerGap())
         );
 
@@ -558,7 +574,7 @@ public class oopjava extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -597,17 +613,17 @@ public class oopjava extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void jtexttotalitemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtexttotalitemsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_jtexttotalitemsActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void jtextdrinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextdrinkActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_jtextdrinkActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void jtxtmealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtmealActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_jtxtmealActionPerformed
 
     private void baconanncheseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baconanncheseActionPerformed
         // TODO add your handling code here:
@@ -625,25 +641,25 @@ public class oopjava extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jchikenburgermealActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void jtextchocomilkShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextchocomilkShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_jtextchocomilkShakeActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void jtextvanilliaconeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextvanilliaconeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_jtextvanilliaconeActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void jtxtMilkShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtMilkShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_jtxtMilkShakeActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void jtxtclassvanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtclassvanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_jtxtclassvanActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void jtxtvanMilkShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtvanMilkShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_jtxtvanMilkShakeActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        // TODO add your handling code here: 
@@ -706,7 +722,7 @@ public class oopjava extends javax.swing.JFrame {
                 cleartext.setText(null) ; 
             }
         }
-         jTextArea.setText(null);
+         jTextArearec.setText(null);
     }//GEN-LAST:event_jBtnResetActionPerformed
 
     private void jchikenburgerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchikenburgerActionPerformed
@@ -721,7 +737,16 @@ public class oopjava extends javax.swing.JFrame {
          Itemcost.ChikenLengend= Itemcost.pChikenLengend * Double.parseDouble(jchikenlegend.getText()) ;
          Itemcost.chikenburgerM= Itemcost.pchikenburgerM * Double.parseDouble(jchikenburgermeal.getText()) ;
          Itemcost.BaconCheeseBurger= Itemcost.pBaconCheeseBurger * Double.parseDouble(baconannchese.getText()) ;
-    
+     
+          
+          
+         Itemcost.MilkShake= Itemcost.pMilkShake * Double.parseDouble(jtxtMilkShake.getText()) ;  
+         Itemcost.VanMilkShake= Itemcost.pVanMilkShake * Double.parseDouble(jtextvanilliacone.getText()) ;    
+         Itemcost.VanillaCone= Itemcost.pVanillaCone * Double.parseDouble(jtxtclassvan.getText()) ;
+         Itemcost.ClassVanilla= Itemcost.pClassVanilla * Double.parseDouble(jtxtvanMilkShake.getText()) ;
+         Itemcost.ChocoMilk= Itemcost.pChocoMilk * Double.parseDouble(jtextchocomilkShake.getText()) ; 
+         
+         
         iSubTotal = Itemcost.GetAmount() ; 
         iTax = Itemcost.cFindTax(iSubTotal); 
         Itotal = iSubTotal + iTax ; 
@@ -731,16 +756,61 @@ public class oopjava extends javax.swing.JFrame {
         
         // ----------------------------------
         
-         String areasubTotal =String.format("£%.2f  Subtotal of your recipes   ", iSubTotal) ;
-        jtextSubtotal.setText(areasubTotal); 
-        jTextArea.setText(areasubTotal);
+       
         
           String Tax =String.format("£%.2f", iTax) ;
-        jTax.setText(subTotal); 
+          jTax.setText(Tax); 
         
           String Total  =String.format("£%.2f", Itotal) ;
-        jTotal.setText(Total); 
+        jTotal.setText(Total);  
+        
+        String Meal = String.format("£%.2f",Itemcost.Meals) ;
+        jtxtmeal.setText(Meal); 
+        
+        String Drink = String.format("£%.2f",Itemcost.Drinks) ;
+        jtextdrink.setText(Drink); 
+        
+         String costtotalitems = String.format("£%.2f",Itemcost.TotalofMD) ;
+        jtexttotalitems.setText(costtotalitems); 
+        //
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+ 
+           int refs  = 1325 + (int) (Math.random()*4238) ; 
+           
+           Calendar timer = Calendar.getInstance() ; 
+           timer.getTime(); 
+           SimpleDateFormat tTime  =  new  SimpleDateFormat("HH:mm:ss");  
+           tTime.format(timer.getTime()) ; 
+           
+           SimpleDateFormat Tdate  =  new  SimpleDateFormat("dd:mm:yyyy");  
+           Tdate.format(timer.getTime()) ; 
+           
+          
+            jTextArearec.append("\t Restaurant Management System :  \n "
+                             + "\n =================================\n"
+                               + "Meals: \t\t  " + jtxtmeal.getText() + "\n\n"
+                      + " Drinks:\t\t " + jtextdrink.getText() + "\n\n"
+                       + " Costs of Items:\t\t " + jtexttotalitems.getText() + "\n\n "
+                        + "================================="+ "\n\n" + 
+                        "Tax : \t\t" + jTax.getText() + "\n\n" + 
+                    "SubTotal : \t\t " + jtextSubtotal.getText() + "\n\n" 
+                     + "Total : \t\t " + jTotal.getText() + "\n" + 
+                    "=================================" + 
+                    
+                    "\nDate  : " + Tdate.format(timer.getTime()) + "\tTime : " + 
+                    tTime.format(timer.getTime()) + 
+                    "\n\n\t\tThank you for comming  "
+                        ); 
+       
+           
+           
+           
+        
+          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -784,6 +854,7 @@ public class oopjava extends javax.swing.JFrame {
     private javax.swing.JButton jBtnReset;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLTax;
     private javax.swing.JLabel jLTax1;
     private javax.swing.JLabel jLTax3;
@@ -813,20 +884,20 @@ public class oopjava extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTax;
-    private javax.swing.JTextArea jTextArea;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextArea jTextArearec;
     private javax.swing.JTextField jTotal;
     private javax.swing.JTextField jchikenburger;
     private javax.swing.JTextField jchikenburgermeal;
     private javax.swing.JTextField jchikenlegend;
     private javax.swing.JTextField jtextFiletoffish;
     private javax.swing.JTextField jtextSubtotal;
+    private javax.swing.JTextField jtextchocomilkShake;
+    private javax.swing.JTextField jtextdrink;
+    private javax.swing.JTextField jtexttotalitems;
+    private javax.swing.JTextField jtextvanilliacone;
+    private javax.swing.JTextField jtxtMilkShake;
+    private javax.swing.JTextField jtxtclassvan;
+    private javax.swing.JTextField jtxtmeal;
+    private javax.swing.JTextField jtxtvanMilkShake;
     // End of variables declaration//GEN-END:variables
 }
